@@ -14,6 +14,7 @@ class Create_Questions_Table {
 			$table->increments('id');
 
 			$table->string('title');
+
 		});
 	}
 

@@ -26,15 +26,15 @@ class Question extends Eloquent {
 		return $this->has_many('Answer');
 	}
 
-	public function delete()
-    {
-        // delete all related answers 
-        foreach($this->answers as $answer)
-        {
-            $answer->delete();
-        }
+	// public function delete()
+ //    {
+ //        // delete all related answers 
+ //        foreach($this->answers as $answer)
+ //        {
+ //            $answer->delete();
+ //        }
 
-        // delete the question
-        return parent::delete();
-    }
+ //        // delete the question
+ //        return parent::delete();
+ //    }
 }
