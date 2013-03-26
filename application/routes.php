@@ -40,10 +40,10 @@ Route::get('/', function()
 
 	$questions = Question::with(array('answers'))->find(1);
 
-
 	echo $questions->to_array()['title'] . '<br />';
 
 	echo Form::open('');
+	
 	foreach ($questions->answers as $answer) {
 		echo Form::label('answer', $answer->title);
 		echo Form::radio('answer', $answer->id);
